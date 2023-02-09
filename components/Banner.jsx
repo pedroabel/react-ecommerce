@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { urlFor } from "@/lib/client";
 
-const Banner = (heroBanner) => {
+const Banner = ({ heroBanner }) => {
   console.log(heroBanner);
   console.log(heroBanner.smallText);
   return (
@@ -12,14 +12,18 @@ const Banner = (heroBanner) => {
         <p className="beats-solo">{heroBanner && heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
         <h1>{heroBanner.largeText1}</h1>
-        <img src="" alt="tech" className="hero-banner-image" />
+        <img
+          src={urlFor(heroBanner.image)}
+          alt="headphones"
+          className="hero-banner-image"
+        />
         <div>
-          <Link href="/product/ID">
-            <button className="button">Button text</button>
+          <Link href={`/product/${heroBanner.product}`}>
+            <button className="button">{heroBanner.buttonText}</button>
           </Link>
           <div className="desc">
             <h5>Description</h5>
-            <p>Description</p>
+            <p>{heroBanner.desc}</p>
           </div>
         </div>
       </div>
