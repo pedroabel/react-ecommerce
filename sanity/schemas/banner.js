@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'image',
-      title: 'Image',
+      title: 'Imagem',
       type: 'image',
       options: {
         hotspot: true,
@@ -13,47 +13,47 @@ export default {
     },
     {
       name: 'buttonText',
-      title: 'ButtonText',
+      title: 'Texto - Botão',
       type: 'string',
     },
     {
       name: 'product',
-      title: 'Product',
+      title: 'Produtos',
       type: 'string',
     },
     {
       name: 'desc',
-      title: 'Desc',
+      title: 'Descrição',
       type: 'string',
     },
     {
       name: 'smallText',
-      title: 'SmallText',
+      title: 'Texto - Pequeno',
       type: 'string',
     },
     {
       name: 'midText',
-      title: 'MidText',
+      title: 'Texto - Medio',
       type: 'string',
     },
     {
       name: 'largeText1',
-      title: 'LargeText1',
+      title: 'Texto - Grande 1',
       type: 'string',
     },
     {
       name: 'largeText2',
-      title: 'LargeText2',
+      title: 'Texto - Grande 2',
       type: 'string',
     },
     {
       name: 'discount',
-      title: 'Discount',
+      title: 'Desconto',
       type: 'string',
     },
     {
       name: 'saleTime',
-      title: 'SaleTime',
+      title: 'Ofeta',
       type: 'string',
     },
   ],

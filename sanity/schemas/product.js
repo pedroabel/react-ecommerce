@@ -1,11 +1,11 @@
 export default {
   name: 'product',
-  title: 'Product',
+  title: 'Produtos',
   type: 'document',
   fields: [
     {
       name: 'image',
-      title: 'Image',
+      title: 'Imagem',
       type: 'array',
       of: [{type: 'image'}],
       options: {
@@ -14,7 +14,7 @@ export default {
     },
     {
       name: 'name',
-      title: 'Name',
+      title: 'Nome',
       type: 'string',
     },
     {
@@ -28,12 +28,12 @@ export default {
     },
     {
       name: 'price',
-      title: 'Price',
+      title: 'Preço',
       type: 'number',
     },
     {
       name: 'details',
-      title: 'Details',
+      title: 'Detalhes',
       type: 'string',
     },
   ],
