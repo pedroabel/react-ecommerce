@@ -5,18 +5,17 @@ import Banner from "../components/Banner";
 import Product from "../components/Product";
 import FooterBanner from "../components/FooterBanner";
 
-const Home = ({ productsData, bannerData }) => (
+const Home = ({ products, bannerData }) => (
   <div>
     <Banner heroBanner={bannerData[0]} />
-    {console.log(productsData)}
+    {console.log(products)}
     <div className="products-heading">
       <h2>Best Seller Products</h2>
       <p>speaker There are many variations passages</p>
     </div>
 
     <div className="products-container">
-      {console.log(productsData)}
-      {productsData?.map((product) => (
+      {products?.map((product) => (
         <Product key={product._id} product={product} />
       ))}
     </div>
@@ -25,14 +24,14 @@ const Home = ({ productsData, bannerData }) => (
 );
 
 export const getServerSideProps = async () => {
-  const productsQuery = '*[_type == "product"]';
-  const productsData = await client.fetch(productsQuery);
+  const query = '*[_type == "product"]';
+  const products = await client.fetch(query);
 
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery);
 
   return {
-    props: { productsData, bannerData },
+    props: { products, bannerData },
   };
 };
 
