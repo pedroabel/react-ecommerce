@@ -7,7 +7,7 @@ import FooterBanner from "../components/FooterBanner";
 
 const Home = ({ products, bannerData }) => (
   <div>
-    <Banner heroBanner={bannerData[0]} />
+    <Banner heroBanner={bannerData.length && bannerData[0]} />
     {console.log(products)}
     <div className="products-heading">
       <h2>Best Seller Products</h2>
