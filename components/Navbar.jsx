@@ -9,8 +9,8 @@ const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
-    <div className="navbar-container">
-      <p className="logo">
+    <div className=" flex justify-between relative bg-gray-700  p-3">
+      <p className="text-lg font-semibold">
         <Link href="/">INSIGHTS</Link>
       </p>
       <button

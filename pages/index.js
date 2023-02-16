@@ -9,11 +9,8 @@ const Home = ({ products, bannerData }) => (
   <div>
     <Banner heroBanner={bannerData.length && bannerData[0]} />
 
-    <div className="text-center ">
-      <h2 className="text-4xl font-bold">Best Seller Products</h2>
-      <p className="text-base text-red-900">
-        speaker There are many variations passages
-      </p>
+    <div className="text-left pt-3 ">
+      <h2 className="text-3xl font-semibold">Produtos Em Alta</h2>
     </div>
 
     <div className="products-container">
@@ -21,7 +18,7 @@ const Home = ({ products, bannerData }) => (
         <Product key={product._id} product={product} />
       ))}
     </div>
-    <FooterBanner footerBanner={bannerData && bannerData[0]} />
+    {/* <FooterBanner footerBanner={bannerData && bannerData[0]} /> */}
   </div>
 );
 
