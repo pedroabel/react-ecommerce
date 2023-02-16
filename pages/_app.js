@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "styles/global.css";
 import Layout from "../components/Layout";
 import { StateContext } from "@/context/StateContext";
 import { Toaster } from "react-hot-toast";
