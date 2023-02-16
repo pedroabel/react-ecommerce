@@ -7,7 +7,10 @@ import FooterBanner from "../components/FooterBanner";
 
 const Home = ({ products, bannerData }) => (
   <div>
-    <Banner heroBanner={bannerData.length && bannerData[0]} />
+    <Banner
+      heroBanner={bannerData.length && bannerData[0]}
+      fullBanner={bannerData.length && bannerData}
+    />
 
     <div className="text-left pt-3 ">
       <h2 className="text-3xl font-semibold">Produtos Em Alta</h2>

@@ -22,8 +22,8 @@ export default {
       type: 'string',
     },
     {
-      name: 'desc',
-      title: 'Descrição',
+      name: 'brand',
+      title: 'Marca',
       type: 'string',
     },
     {
