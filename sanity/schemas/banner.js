@@ -18,7 +18,7 @@ export default {
     },
     {
       name: 'product',
-      title: 'Produtos',
+      title: 'Produto - Slug',
       type: 'string',
     },
     {
@@ -27,23 +27,13 @@ export default {
       type: 'string',
     },
     {
-      name: 'smallText',
-      title: 'Texto - Pequeno',
+      name: 'category',
+      title: 'Categoria',
       type: 'string',
     },
     {
-      name: 'midText',
-      title: 'Texto - Medio',
-      type: 'string',
-    },
-    {
-      name: 'largeText1',
-      title: 'Texto - Grande 1',
-      type: 'string',
-    },
-    {
-      name: 'largeText2',
-      title: 'Texto - Grande 2',
+      name: 'title',
+      title: 'Titulo',
       type: 'string',
     },
     {
@@ -53,7 +43,7 @@ export default {
     },
     {
       name: 'saleTime',
-      title: 'Ofeta',
+      title: 'Oferta',
       type: 'string',
     },
   ],
