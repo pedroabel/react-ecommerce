@@ -42,8 +42,11 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-wrapper" ref={cartRef}>
-      <div className="cart-container">
+    <div
+      className="w-screen fixed right-0 top-0 z-auto transition-all ease-in-out"
+      ref={cartRef}
+    >
+      <div className="h-screen w-[600px] pl-10 pr-2 bg-slate-100 float-right relative">
         <button
           type="butoon"
           className="cart-heading"
