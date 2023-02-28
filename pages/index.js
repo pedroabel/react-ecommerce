@@ -10,10 +10,10 @@ const Home = ({ products, bannerData }) => (
     <Banner heroBanner={bannerData.length && bannerData[0]} />
 
     <div className="text-left pt-3 ">
-      <h2 className="text-3xl font-semibold">Produtos Em Alta</h2>
+      <h2 className="text-3xl font-semibold">Em destaque</h2>
     </div>
 
-    <div className="products-container">
+    <div className="flex flex-wrap justify-center gap-4 mt-5 w-full py-4">
       {products?.map((product) => (
         <Product key={product._id} product={product} />
       ))}
