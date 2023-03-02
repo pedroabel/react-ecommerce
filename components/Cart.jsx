@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
 import Link from "next/link";
+import React, { useRef } from "react";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -7,10 +7,11 @@ import {
   AiOutlineShopping,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
-import { toast } from "react-hot-toast";
-import { useStateContext } from "@/context/StateContext";
-import { urlFor } from "@/lib/client";
-import getStripe from "@/lib/getStripe";
+import toast from "react-hot-toast";
+
+import { useStateContext } from "../context/StateContext";
+import { urlFor } from "../lib/client";
+import getStripe from "../lib/getStripe";
 
 const Cart = () => {
   const cartRef = useRef();
@@ -34,45 +35,40 @@ const Cart = () => {
       body: JSON.stringify(cartItems),
     });
 
-    if (response.statusCode == 500) return;
+    if (response.statusCode === 500) return;
 
     const data = await response.json();
-    toast.loading("Redirecting");
+
+    toast.loading("Redirecting...");
+
     stripe.redirectToCheckout({ sessionId: data.id });
   };
 
   return (
-    <div
-      class="relative z-10"
-      aria-labelledby="slide-over-title"
-      role="dialog"
-      aria-modal="true"
-      ref={cartRef}
-    >
-      <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div className="relative z-10" ref={cartRef}>
+      <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-      <div class="fixed inset-0 overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden">
-          <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-            <div class="pointer-events-auto w-screen max-w-md">
-              <div class="flex h-full flex-col  bg-white shadow-xl">
-                <div class="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
-                  <div class="flex items-start justify-between">
-                    <h2
-                      class="text-lg font-medium text-gray-900"
-                      id="slide-over-title"
-                    >
+      <div className="fixed inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+            <div className="pointer-events-auto w-screen max-w-md">
+              <div className="flex h-full flex-col bg-white shadow-xl">
+                <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+                  <div className="flex items-start justify-between">
+                    <h2 className="text-lg font-medium text-gray-900">
                       Carrinho
                     </h2>
-                    <div class="ml-3 flex h-7 items-center">
+                    <span className="cart-num-items">
+                      {totalQuantities} produto(s)
+                    </span>
+                    <div className="ml-3 flex h-7 items-center">
                       <button
-                        type="button"
-                        class="-m-2 p-2 text-gray-400 hover:text-gray-500"
+                        className="-m-2 p-2 text-gray-400 hover:text-gray-500"
                         onClick={() => setShowCart(false)}
                       >
                         <span class="sr-only">Fechar</span>
                         <svg
-                          class="h-6 w-6"
+                          className="h-6 w-6"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
@@ -88,23 +84,28 @@ const Cart = () => {
                       </button>
                     </div>
                   </div>
-                  <div className=" place-content-center m-32 pb-80">
-                    <h3 className="text-center text-gray-600 font-semibold">
-                      Seu carrinho está vázio
-                    </h3>
-                  </div>
 
-                  <div className="border-t border-gray-200 py-6 px-4 sm:px-6 ">
-                    <div className="mt-6">
-                      <a
-                        href="/"
-                        className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                      >
-                        Continuar comprando
-                        <span aria-hidden="true">&rarr;</span>
-                      </a>
+                  {cartItems.length == 0 && (
+                    <div>
+                      <div className=" place-content-center m-32 pb-80">
+                        <h3 className="text-center text-gray-600 font-semibold">
+                          Seu carrinho está vázio
+                        </h3>
+                      </div>
+
+                      <div className="border-t border-gray-200 py-6 px-4 sm:px-6 ">
+                        <div className="mt-6">
+                          <a
+                            href="/"
+                            className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                          >
+                            Continuar comprando
+                            <span aria-hidden="true">&rarr;</span>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   {cartItems.length >= 1 &&
                     cartItems.map((item) => (
@@ -160,7 +161,7 @@ const Cart = () => {
                                     class="font-medium text-indigo-600 hover:text-indigo-500"
                                     onClick={() => onRemove(item)}
                                   >
-                                    Remove
+                                    Remover
                                   </button>
                                 </div>
                               </div>
@@ -169,27 +170,39 @@ const Cart = () => {
                         </div>
                       </div>
                     ))}
-                </div>
 
-                {cartItems.length >= 1 && (
-                  <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
-                    <div class="flex justify-between text-base font-medium text-gray-900">
-                      <p>Subtotal</p>
-                      <p>R$ {totalPrice.toFixed(2)}</p>
+                  {cartItems.length >= 1 && (
+                    <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
+                      <div className="flex justify-between text-base font-medium text-gray-900">
+                        <p>Subtotal</p>
+                        <p>R$ {totalPrice.toFixed(2)}</p>
+                      </div>
+                      <p className="mt-0.5 text-sm text-gray-500">
+                        Entrega será calculda no final da compra.
+                      </p>
+                      <div className="mt-6">
+                        <a
+                          href="#"
+                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                          onClick={handleCheckout}
+                        >
+                          Comprar
+                        </a>
+                      </div>
+                      <div className="mt-6flex justify-center text-center text-sm text-gray-500">
+                        <p className="">ou</p>
+                        <button
+                          type="button"
+                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                          onClick={() => setOpen(false)}
+                        >
+                          Continuar a compra
+                          <span aria-hidden="true"> &rarr;</span>
+                        </button>
+                      </div>
                     </div>
-                    <p class="mt-0.5 text-sm text-gray-500">
-                      Entrega será calculda no final da compra.
-                    </p>
-                    <div class="mt-6">
-                      <a
-                        class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                        onClick={handleCheckout}
-                      >
-                        Comprar
-                      </a>
-                    </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           </div>

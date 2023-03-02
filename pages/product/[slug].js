@@ -22,9 +22,9 @@ const ProductDetails = ({ product, products }) => {
   };
   return (
     <section>
-      <div className="py-10 place-items-center max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:place-items-center lg:py-20">
+      <div className="pt-10 place-items-center max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:place-items-center lg:py-20">
         <div>
-          <div className="flex rounded-xl bg-purple-200 justify-center w-fit ">
+          <div className="flex rounded-xl bg-gray-200 justify-center w-fit ">
             <img
               src={urlFor(image && image[index])}
               className="rounded-2xl border-purple-300 w-[400px] h-[400px] cursor-pointer"
@@ -38,7 +38,7 @@ const ProductDetails = ({ product, products }) => {
                 className={
                   i === index
                     ? "rounded-lg w-[70px] h-[70px] cursor-pointer bg-slate-900"
-                    : "rounded-lg w-[70px] h-[70px] cursor-pointer"
+                    : "rounded-lg w-[70px] h-[70px] cursor-pointer "
                 }
                 onMouseEnter={() => setIndex(i)}
               />
@@ -64,7 +64,7 @@ const ProductDetails = ({ product, products }) => {
             </ul>
 
             <p className="text-slate-600 text-sm">
-              <s>R$ {price * (1 / 10)}</s>
+              <s>R$ {(price * (1 / 10)).toFixed(2)}</s>
             </p>
           </div>
 
@@ -87,7 +87,7 @@ const ProductDetails = ({ product, products }) => {
                   className="flex items-center justify-center gap-4 bg-purple-500 py-2 px-4 text-white font-bold rounded-lg shadow mt-5 w-full lg:mt-0 hover:bg-purple-600 transition-all duration-200"
                   onClick={() => onAdd(product, qty)}
                 >
-                  <AiOutlineShoppingCart /> Add to cart
+                  <AiOutlineShoppingCart /> Adicionar no carrinho
                 </button>
               </div>
             </div>
@@ -96,9 +96,9 @@ const ProductDetails = ({ product, products }) => {
       </div>
 
       <div className="bg-white">
-        <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className=" max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 class="mb-4 text-2xl font-bold tracking-tight text-gray-900">
-            Customers also purchased
+            Pesquisas similiares
           </h2>
 
           <div className="flex  grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">

@@ -1,4 +1,3 @@
-import product from "@/sanity/schemas/product";
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
@@ -18,6 +17,7 @@ export const StateContext = ({ children }) => {
     const checkProductInCart = cartItems.find(
       (item) => item._id === product._id
     );
+
     setTotalPrice(
       (prevTotalPrice) => prevTotalPrice + product.price * quantity
     );
@@ -35,6 +35,7 @@ export const StateContext = ({ children }) => {
       setCartItems(updatedCartItems);
     } else {
       product.quantity = quantity;
+
       setCartItems([...cartItems, { ...product }]);
     }
 
@@ -49,7 +50,6 @@ export const StateContext = ({ children }) => {
       (prevTotalPrice) =>
         prevTotalPrice - foundProduct.price * foundProduct.quantity
     );
-
     setTotalQuantities(
       (prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity
     );
@@ -63,18 +63,16 @@ export const StateContext = ({ children }) => {
 
     if (value === "inc") {
       setCartItems([
-        ...newCartItems.slice(0, index),
+        ...newCartItems,
         { ...foundProduct, quantity: foundProduct.quantity + 1 },
-        ...newCartItems.slice(index),
       ]);
       setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
     } else if (value === "dec") {
       if (foundProduct.quantity > 1) {
         setCartItems([
-          ...newCartItems.slice(0, index),
+          ...newCartItems,
           { ...foundProduct, quantity: foundProduct.quantity - 1 },
-          ...newCartItems.slice(index),
         ]);
         setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
@@ -83,7 +81,7 @@ export const StateContext = ({ children }) => {
   };
 
   const incQty = () => {
-    setQty((prev) => prev + 1);
+    setQty((prevQty) => prevQty + 1);
   };
 
   const decQty = () => {
