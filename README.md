@@ -23,18 +23,19 @@ O CMS escolhido para gerenciamento de conteúdo foi o Sanity, que oferece uma in
 
 Durante o desenvolvimento do projeto, foram encontrados diversos desafios, como a integração da API de pagamentos externa e a implementação do carrinho de compras . Além disso, a tentativa de organização e modularização do código também foi um desafio importante, para garantir a manutenibilidade e escalabilidade do projeto.
 
-## ⚙️ - Resultados
+## ⚙️ - Resultado
 O projeto foi concluído com sucesso, atingindo os objetivos propostos de aprimorar conhecimentos em programação com React. Foram implementadas diversas funcionalidades importantes de uma loja virtual, como a navegação entre páginas, o carrinho de compras e o pagamento via API externa. A aplicação foi desenvolvida com sucesso, e o resultado final foi um e-commerce totalmente funcional que permitia aos usuários realizar compras e vendas produtos.
 
 **LINK DO ECOMMERCE** - https://react-ecommerce-pi-two.vercel.app/
 
-## CONCLUSÃO
+## 🌱 - Conclusão
 
 Este projeto foi uma ótima maneira de praticar minhas capacidades em programação e aprender novas tecnologias. A combinação de React, Next.js, Stripe e Sanity permitiu criar uma aplicação fácil de usar, e a experiência de desenvolvimento foi extremamente enriquecedora. Com a conclusão deste projeto, me sinto mais confiante e capaz de enfrentar projetos maiores e mais desafiadores no futuro.
 
-## 💬 - CONTATO
+## 💬 - Contato
 
 Desenvolvido por Pedro Abel
+
 - **Email**: pedrooabell@gmail.com
 - **Linkedin**: https://www.linkedin.com/in/pedro-abel/
 - **Perfil do Github**: https://github.com/voidPedro
