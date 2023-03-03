@@ -20,9 +20,11 @@ export default async function handler(req, res) {
           const newImage = img
             .replace(
               "image-",
-              "https://cdn.sanity.io/images/qytmqczd/production/"
+              "https://cdn.sanity.io/images/qytmqczd/production"
             )
             .replace("-webp", ".webp");
+          console.log(img);
+          console.log(newImage);
 
           return {
             price_data: {
