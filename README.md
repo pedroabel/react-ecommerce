@@ -38,4 +38,4 @@ Desenvolvido por Pedro Abel
 
 - **Email**: pedrooabell@gmail.com
 - **Linkedin**: https://www.linkedin.com/in/pedro-abel/
-- **Perfil do Github**: https://github.com/voidPedro
+- **Perfil do Github**: https://github.com/pedroabel
