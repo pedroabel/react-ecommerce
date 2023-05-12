@@ -11,7 +11,7 @@ const Footer = () => {
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
           <a
-            href="https://github.com/voidPedro"
+            href="https://github.com/pedroabel"
             className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
           >
             <svg
