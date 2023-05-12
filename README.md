@@ -1,38 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🧠 - Introdução
 
-## Getting Started
+Este projeto pessoal foi desenvolvido com o objetivo de praticar habilidades de programação desenvolvendo um projeto real com diversas funcionalidades, especialmente em relação às tecnologias React e Next.js. A ideia era criar um e-commerce simples, mas funcional, que permitisse aos usuários comprar produtos.
 
-First, run the development server:
+## 💻 - Tecnologias
+  Ferramentas utilizadas para a realização desse projeto:
+- **React**
+- **Stripe**
+- **Sanity**
+- **Next.js**
+- **Vercel**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 💭 - Metodologia
+Para iniciar o projeto, foram realizadas pesquisas sobre as melhores tecnologias para construção de um ecommerce moderno e escalável. Após a definição das tecnologias, foram criadas as páginas principais do ecommerce, como página inicial, página de produtos e página de carrinho de compras.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para desenvolvimento da interface de usuário, foi utilizado o React, um framework JavaScript popular para construção de interfaces baseado em componentes.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Para processamento de pagamentos, foi escolhido o Stripe, um serviço de pagamento online seguro e confiável. A integração do Stripe permitiu que os clientes pudessem fazer pagamentos com cartão de crédito.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+O CMS(Sistema de Gerenciamento de Conteúdo) escolhido para gerenciamento de conteúdo foi o Sanity, que oferece uma interface de usuário fácil de usar para gerenciar e publicar conteúdo. Com o Sanity, foi possível criar e gerenciar as páginas de produtos.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 💫 - Desafios Enfrentados
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Durante o desenvolvimento do projeto, foram encontrados diversos desafios, como a integração da API de pagamentos externa e a implementação do carrinho de compras . Além disso, a tentativa de organização e modularização do código também foi um desafio importante, para garantir a manutenibilidade e escalabilidade do projeto.
 
-## Learn More
+## ⚙️ - Resultado
+O projeto foi concluído com sucesso, atingindo os objetivos propostos de aprimorar conhecimentos em programação com React. Foram implementadas diversas funcionalidades importantes de uma loja virtual, como a navegação entre páginas, o carrinho de compras e o pagamento via API externa. A aplicação foi desenvolvida com sucesso, e o resultado final foi um e-commerce  funcional que permitia aos usuários realizar compras e vendas produtos.
 
-To learn more about Next.js, take a look at the following resources:
+**LINK DO ECOMMERCE** - https://react-ecommerce-pi-two.vercel.app/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌱 - Conclusão
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Este projeto foi uma ótima maneira de praticar minhas capacidades em programação e aprender novas tecnologias. A combinação de React, Stripe e Sanity permitiu criar uma aplicação, e a experiência de desenvolvimento foi extremamente enriquecedora. Com a conclusão deste projeto, me sinto mais confiante e capaz de enfrentar projetos maiores e mais desafiadores no futuro.
 
-## Deploy on Vercel
+## 💬 - Contato
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Desenvolvido por Pedro Abel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Email**: pedrooabell@gmail.com
+- **Linkedin**: https://www.linkedin.com/in/pedro-abel/
+- **Perfil do Github**: https://github.com/pedroabel
